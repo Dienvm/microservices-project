@@ -16,7 +16,4 @@ kubectl apply -f reverse-proxy-service.yaml
 
 kubectl expose deployment frontend --type=LoadBalancer --name=publicfrontend
 kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproxy  
-# Auto scale
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-kubectl autoscale deployment backend-feed --cpu-percent=70 --min=3 --max=5
 

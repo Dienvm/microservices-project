@@ -8,7 +8,6 @@ import * as jwt from "jsonwebtoken";
 import { NextFunction } from "connect";
 
 import * as EmailValidator from "email-validator";
-import { config } from "bluebird";
 
 const router: Router = Router();
 
@@ -61,7 +60,6 @@ router.get(
 router.post("/login", async (req: Request, res: Response) => {
   const email = req.body.email;
   const password = req.body.password;
-  console.log({ email, password });
 
   if (!email || !EmailValidator.validate(email)) {
     return res
