@@ -17,7 +17,7 @@ script:
   - docker tag udagram-api-feed dienvm1/udagram-api-feed:v1
   - docker tag udagram-api-user dienvm1/udagram-api-user:v1
   - docker tag udagram-frontend dienvm1/udagram-frontend:v1
-  - docker tag udagram-reverseproxy dienvm1/udagram-reverseproxy:v1
+  - docker tag udagram-reverseproxy dienvm1/reverseproxy:v1
 
 after_script:
   - docker images
@@ -26,4 +26,4 @@ after_script:
   - docker push dienvm1/udagram-api-feed:v1
   - docker push dienvm1/udagram-api-user:v1
   - docker push dienvm1/udagram-frontend:v1
-  - docker push dienvm1/udagram-reverseproxy:v1
+  - docker push dienvm1/reverseproxy:v1
